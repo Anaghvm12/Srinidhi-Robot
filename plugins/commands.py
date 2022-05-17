@@ -1,5 +1,6 @@
 import os
 import logging
+import buttons
 import random
 import asyncio
 from Script import script
@@ -37,13 +38,7 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('➕ 𝖠ᴅᴅ 𝖬ᴇ 𝖳ᴏ 𝖸ᴏᴜʀ 𝖦ʀᴏᴜᴘ ➕', url='http://t.me/Sae_byeok_Ro_bot?startgroup=true')             
-            ],[
-            InlineKeyboardButton('𝖧ᴇʟᴘ 📚', callback_data='help'),
-            InlineKeyboardButton('𝖠ʙᴏᴜᴛ 😎', callback_data='about')
-            ],[
-            InlineKeyboardButton('𝖴ᴘᴅᴀᴛᴇs 📥', url='https://t.me/+nFczt5aYHpM2YzFl'),
-            InlineKeyboardButton('𝖦ʀᴏᴜᴘ ♻️', url='https://t.me/Movies_Series_Requesting_Group')
+            InlineKeyboardButton('ᴄʟɪᴄᴋ ғᴏʀ ᴍᴏʀᴇ ʙᴜᴛᴛᴏɴ', callback_data='buttons')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -78,7 +73,7 @@ async def start(client, message):
         return
     if len(message.command) ==2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('➕ 𝖠ᴅᴅ 𝖬ᴇ 𝖳ᴏ 𝖸ᴏᴜʀ 𝖦ʀᴏᴜᴘ ➕', url='http://t.me/Sae_byeok_Ro_bot?startgroup=true')             
+            InlineKeyboardButton('ᴏᴡɴᴇʀ 👑', url='https://t.me/MagnusTG')             
             ],[
             InlineKeyboardButton('𝖧ᴇʟᴘ 📚', callback_data='help'),
             InlineKeyboardButton('𝖠ʙᴏᴜᴛ 😎', callback_data='about')
